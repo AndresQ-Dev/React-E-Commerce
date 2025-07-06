@@ -1,6 +1,6 @@
 # Mi E‑Commerce en React
 
-Una tienda online construida con React, Context API y MockAPI. 
+Una tienda online sencilla construida con React, Context API y MockAPI. 
 Incluye:
 
 - **Autenticación** (login/logout, rutas protegidas)  
@@ -30,7 +30,7 @@ Incluye:
 
 ---
 
-## 🚀 Instalación y Dev
+## 🚀 Instalación
 
 1. Clonar este repositorio  
    ```bash
