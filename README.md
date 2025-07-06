@@ -1,6 +1,7 @@
 # Mi E‑Commerce en React
 
-Una tienda online construida con React, Context API y MockAPI. Incluye:
+Una tienda online construida con React, Context API y MockAPI. 
+Incluye:
 
 - **Autenticación** (login/logout, rutas protegidas)  
 - **Carrito de Compras** (agregar, aumentar/disminuir cantidad, eliminar, vaciar)  
@@ -10,14 +11,14 @@ Una tienda online construida con React, Context API y MockAPI. Incluye:
 - **Íconos** con React Icons  
 - **SEO** con React Helmet Async  
 - **Responsive** con Bootstrap y `styled‑components`  
-- **Optimización**: lazy‑load, code‑splitting, minificación, tree‑shaking
+- **Optimización**: lazy‑load
 
 ---
 
 ## 📋 Tecnologías
 
-- **React 19** + Hooks  
-- **Vite** (bundler)  
+- **React 19.1.0 + Hooks  
+- **Vite**
 - **React‑Router v6**  
 - **React Bootstrap** (UI)  
 - **Styled‑Components** (estilos encapsulados)  
@@ -25,7 +26,7 @@ Una tienda online construida con React, Context API y MockAPI. Incluye:
 - **React Icons** (íconos)  
 - **React Helmet Async** (SEO)  
 - **Context API** (Auth, Products, Cart)  
-- **MockAPI** (backend simulado)  
+- **MockAPI** (backend simulado)...(Agregar más detalles)  
 
 ---
 
@@ -35,4 +36,3 @@ Una tienda online construida con React, Context API y MockAPI. Incluye:
    ```bash
    git clone https://github.com/tu-usuario/mi-ecommerce-react.git
    cd mi-ecommerce-react
-   
