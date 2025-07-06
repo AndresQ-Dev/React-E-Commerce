@@ -1,0 +1,25 @@
+/* Aplica a todo el html y body */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hace que App use todo el alto y distribuya espacio con flex */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Esto hace que el contenido crezca y empuje el footer */
+.app-content {
+  flex: 1;
+}
+
+footer a:hover {
+  color: #000 !important; /* Cambia a negro al pasar el mouse */
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
