@@ -87,7 +87,7 @@ export default function CartPage() {
             <div>
               <strong>{item.name}</strong><br/>
               <small>Precio: ${item.price}</small><br/>
-              <small>Qty: {item.quantity}</small><br/>
+              <small>Cant: {item.quantity}</small><br/>
               <small>Subtotal: ${item.price * item.quantity}</small>
             </div>
             <Button
