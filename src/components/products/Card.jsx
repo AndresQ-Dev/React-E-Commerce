@@ -19,7 +19,7 @@ export default function ProductCard({ product }) {
             <Card.Body className="d-flex flex-column">
                 <Card.Title>{product.name}</Card.Title>
                 <Card.Text>${product.price}</Card.Text>
-                {/* Aquí va el botón */}
+                {/* botón */}
                 <Button
                     variant="primary"
                     onClick={() => addProduct(product)}

@@ -18,7 +18,7 @@ export default function ProductForm({ onSubmit, onClose, initialData }) {
       setDescription(initialData.description || '');
       setImage(initialData.image || '');
     }
-  }, []); // Solo se ejecuta al montar, no al renderizar
+  }, []); // Solo se ejecuta al montar
 
   // Validación
   const validate = () => {

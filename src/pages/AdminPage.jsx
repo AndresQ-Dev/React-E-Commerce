@@ -1,4 +1,4 @@
-// src/pages/AdminPage.jsx
+
 import React, { useContext, useState } from 'react';
 import { Button, Container, Table, Row, Col, Card } from 'react-bootstrap';
 import { ProductContext } from '../context/ProductContext';

@@ -1,4 +1,4 @@
-// src/components/common/StyledSearchInput.jsx
+// estilos para barra de busqueda en Productos (Mejorar...)
 import styled from 'styled-components';
 import { Form } from 'react-bootstrap';
 

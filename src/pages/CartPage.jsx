@@ -1,4 +1,4 @@
-// src/pages/CartPage.jsx
+
 import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import { Button, Table, Container, Row, Col } from 'react-bootstrap';
@@ -77,7 +77,7 @@ export default function CartPage() {
         </Table>
       </div>
 
-      {/* ====== LISTA para xs/sm ====== */}
+      {/* ====== LISTA para xs/sm en moviles chicos... ====== */}
       <div className="d-md-none">
         {cartItems.map(item => (
           <div 
@@ -101,7 +101,7 @@ export default function CartPage() {
         ))}
       </div>
 
-      {/* TOTAL Y BOTÓN */}
+      {/*TOTAL Y BOTÓN */}
       <Row className="justify-content-center mt-3">
         <Col xs="auto" className="text-center">
           <h3>Total: ${totalPrice}</h3>

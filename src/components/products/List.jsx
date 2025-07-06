@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Row, Col, Button, Spinner } from 'react-bootstrap';
 import { CartContext } from '../../context/CartContext';
-import { CardWrapper } from './StyledCard';   // <- tu styled card
+import { CardWrapper } from './StyledCard';   // estilos para la tarjeta de producto...
 
 export default function List({ products }) {
   const { addProduct } = useContext(CartContext);

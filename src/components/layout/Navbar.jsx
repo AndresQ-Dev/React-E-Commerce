@@ -1,4 +1,3 @@
-// src/components/layout/Navbar.jsx
 import React, { useContext } from 'react';
 import { Navbar, Nav, Container, Badge, Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
@@ -32,13 +31,13 @@ export default function AppNavbar() {
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Inicio</Nav.Link>
             <Nav.Link as={Link} to="/products">Productos</Nav.Link>
-            {/* Mostramos el link al panel de admin solo si el usuario está logueado */}
+            {/*panel de admin solo visible si el usuario está logueado :) */}
             {isAuthenticated && (
               <Nav.Link as={Link} to="/admin">Admin</Nav.Link>
             )}
           </Nav>
 
-          {/* Links de usuario y carrito a la derecha */}
+          {/*Links de usuario y carrito a la derecha siempre */}
           <Nav>
             <Nav.Link as={Link} to="/cart" className="d-flex align-items-center">
               <CartFill size={20} />
@@ -59,7 +58,7 @@ export default function AppNavbar() {
                 </Button>
               </>
             ) : (
-              // Si no está autenticado
+              // Si no lo estÁ
               <Nav.Link as={Link} to="/login" className="d-flex align-items-center">
                 <BoxArrowInRight size={20} className="me-1" /> Login
               </Nav.Link>
