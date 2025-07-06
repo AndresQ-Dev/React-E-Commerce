@@ -1,32 +1,27 @@
+// src/pages/ProductsPage.jsx
 import React, { useContext, useEffect, useState } from 'react';
 import { ProductContext } from '../context/ProductContext';
 import List from '../components/products/List';
 import Loader from '../components/common/Loader';
-import { Form, Container, Pagination } from 'react-bootstrap';
+import { Form, Container, Pagination, Row, Col, InputGroup } from 'react-bootstrap';
 import { Helmet } from 'react-helmet-async';
+import { FaSearch } from 'react-icons/fa';
+import { StyledSearchInput } from '../components/common/StyledSearchInput';
 
 export default function ProductsPage() {
   const { products, loading, error, fetchProducts } = useContext(ProductContext);
-
-  // Estado para búsqueda
   const [searchTerm, setSearchTerm] = useState('');
-  // Estados para paginación
   const [page, setPage] = useState(1);
   const perPage = 12;
 
-  // Carga inicial de productos
   useEffect(() => {
-    if (products.length === 0) {
-      fetchProducts();
-    }
+    if (products.length === 0) fetchProducts();
   }, [fetchProducts, products.length]);
 
-  // Filtrado por búsqueda
-  const filtered = products.filter((p) =>
+  const filtered = products.filter(p =>
     p.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Cálculos de paginación
   const totalPages = Math.ceil(filtered.length / perPage);
   const start = (page - 1) * perPage;
   const currentItems = filtered.slice(start, start + perPage);
@@ -45,29 +40,35 @@ export default function ProductsPage() {
       </Helmet>
 
       <Container className="mt-4">
-        <h1 className="mb-4">Productos</h1>
+        <h1 className="mb-4 text-center">Productos</h1>
 
-        {/* Barra de búsqueda */}
-        <Form.Control
-          type="text"
-          placeholder="Buscar productos..."
-          className="mb-3"
-          value={searchTerm}
-          onChange={(e) => {
-            setSearchTerm(e.target.value);
-            setPage(1); // Resetear a página 1 al cambiar término
-          }}
-        />
+        {/* Barra de búsqueda más visible */}
+        <Row className="justify-content-center mb-4">
+          <Col xs={12} sm={10} md={8} lg={6}>
+            <InputGroup>
+              <InputGroup.Text className="bg-white border-0">
+                <FaSearch color="#0d6efd" />
+              </InputGroup.Text>
+              <StyledSearchInput
+                type="text"
+                placeholder="Buscar productos..."
+                value={searchTerm}
+                onChange={e => {
+                  setSearchTerm(e.target.value);
+                  setPage(1);
+                }}
+              />
+            </InputGroup>
+          </Col>
+        </Row>
 
-        {/* Lista de productos paginada */}
         <List products={currentItems} />
 
-        {/* Componente de paginación */}
         {totalPages > 1 && (
           <Pagination className="justify-content-center mt-4">
             <Pagination.Prev
               disabled={page === 1}
-              onClick={() => setPage((p) => Math.max(p - 1, 1))}
+              onClick={() => setPage(p => Math.max(p - 1, 1))}
             />
             {Array.from({ length: totalPages }, (_, i) => (
               <Pagination.Item
@@ -80,7 +81,7 @@ export default function ProductsPage() {
             ))}
             <Pagination.Next
               disabled={page === totalPages}
-              onClick={() => setPage((p) => Math.min(p + 1, totalPages))}
+              onClick={() => setPage(p => Math.min(p + 1, totalPages))}
             />
           </Pagination>
         )}

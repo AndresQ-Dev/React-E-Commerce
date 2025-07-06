@@ -1,3 +1,4 @@
+// src/pages/CartPage.jsx
 import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import { Button, Table } from 'react-bootstrap';
@@ -37,23 +38,23 @@ export default function CartPage() {
               <td>{item.name}</td>
               <td>${item.price}</td>
               <td>
-                <Button
-                  variant="outline-secondary"
-                  size="sm"
-                  onClick={() => decreaseQuantity(item.id)}
-                  className="me-2"
-                >
-                  -
-                </Button>
-                {item.quantity}
-                <Button
-                  variant="outline-secondary"
-                  size="sm"
-                  onClick={() => increaseQuantity(item.id)}
-                  className="ms-2"
-                >
-                  +
-                </Button>
+                <div className="d-flex align-items-center justify-content-center">
+                  <Button
+                    variant="outline-secondary"
+                    size="sm"
+                    onClick={() => decreaseQuantity(item.id)}
+                  >
+                    −
+                  </Button>
+                  <span className="mx-2">{item.quantity}</span>
+                  <Button
+                    variant="outline-secondary"
+                    size="sm"
+                    onClick={() => increaseQuantity(item.id)}
+                  >
+                    +
+                  </Button>
+                </div>
               </td>
               <td>${item.price * item.quantity}</td>
               <td>

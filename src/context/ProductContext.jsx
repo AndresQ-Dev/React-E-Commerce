@@ -8,8 +8,8 @@ const API_URL = import.meta.env.VITE_API_URL;
 
 export const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [loading, setLoading]   = useState(true);
+  const [error, setError]       = useState(null);
 
   const fetchProducts = useCallback(async () => {
     try {
@@ -32,11 +32,12 @@ export const ProductProvider = ({ children }) => {
     }
   };
 
-  const updateProduct = async (updatedProduct) => {
+  // Ahora recibe (id, productData)
+  const updateProduct = async (id, productData) => {
     try {
-      await axios.put(`${API_URL}/${updatedProduct.id}`, updatedProduct);
+      const response = await axios.put(`${API_URL}/${id}`, productData);
       setProducts(prev =>
-        prev.map(p => (p.id === updatedProduct.id ? updatedProduct : p))
+        prev.map(p => (p.id === id ? response.data : p))
       );
     } catch (err) {
       setError('Error al actualizar el producto.');
