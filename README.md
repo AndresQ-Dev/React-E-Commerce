@@ -1,12 +1,53 @@
-# React + Vite
+# Mi E‑Commerce en React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una tienda online construida con React, Context API y MockAPI. Incluye:
 
-Currently, two official plugins are available:
+- **Autenticación** (login/logout, rutas protegidas)  
+- **Carrito de Compras** (agregar, aumentar/disminuir cantidad, eliminar, vaciar)  
+- **CRUD de Productos** (Agregar, Editar, Eliminar) con MockAPI  
+- **Búsqueda** en tiempo real y **Paginación**  
+- **Notificaciones** con React Toastify  
+- **Íconos** con React Icons  
+- **SEO** con React Helmet Async  
+- **Responsive** con Bootstrap y `styled‑components`  
+- **Optimización**: lazy‑load, code‑splitting, minificación, tree‑shaking
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📋 Tecnologías
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 19** + Hooks  
+- **Vite** (bundler)  
+- **React‑Router v6**  
+- **React Bootstrap** (UI)  
+- **Styled‑Components** (estilos encapsulados)  
+- **React Toastify** (notificaciones)  
+- **React Icons** (íconos)  
+- **React Helmet Async** (SEO)  
+- **Context API** (Auth, Products, Cart)  
+- **MockAPI** (backend simulado)  
+
+---
+
+## 🚀 Instalación y Dev
+
+1. Clonar este repositorio  
+   ```bash
+   git clone https://github.com/tu-usuario/mi-ecommerce-react.git
+   cd mi-ecommerce-react
+
+📂 Estructura de Carpetas
+
+├── public/                 # index.html, favicon, etc.
+├── src/
+│   ├── api/                # Lógica de llamadas a MockAPI
+│   ├── components/
+│   │   ├── common/         # Loader, ConfirmDeleteModal, etc.
+│   │   └── products/       # List, Card, ProductForm, ProductModal
+│   ├── context/            # AuthContext, ProductContext, CartContext
+│   ├── pages/              # HomePage, ProductsPage, CartPage, AdminPage, LoginPage
+│   ├── routes/             # AppRouter, ProtectedRoute
+│   ├── App.jsx
+│   └── main.jsx
+├── vite.config.js
+└── package.json
