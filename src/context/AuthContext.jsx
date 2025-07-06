@@ -11,12 +11,14 @@ export const AuthProvider = ({ children }) => {
     if (storedUser) setUser(JSON.parse(storedUser));
   }, []);
 
+  // Simulamos un login con el ingreso de un mail validado...
   const login = (email) => {
     const userData = { email };
     localStorage.setItem('user', JSON.stringify(userData));
     setUser(userData);
   };
 
+  // Limpiamos el localStorage y el estado del usuario
   const logout = () => {
     localStorage.removeItem('user');
     setUser(null);

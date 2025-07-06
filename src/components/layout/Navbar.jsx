@@ -4,7 +4,7 @@ import { Navbar, Nav, Container, Badge, Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from './../../context/AuthContext'; // Contexto de autenticación
 import { CartContext } from '../../context/CartContext'; // Contexto del carrito
-import { CartFill, BoxArrowInRight, BoxArrowRight } from 'react-bootstrap-icons'; // Íconos
+import { CartFill, BoxArrowInRight, BoxArrowRight } from 'react-bootstrap-icons'; // Íconos (revisar si están visualizandose bien)
 
 export default function AppNavbar() {
   // 1. llamado a contextos de autenticación y carrito

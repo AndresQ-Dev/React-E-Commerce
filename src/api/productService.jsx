@@ -1,7 +1,10 @@
 import axios from 'axios';
 
-// Usa exactamente como lo indica MockAPI
-const API_URL = "https://6869b5392af1d945cea265e5.mockapi.io/api/Products";
+// Usar la variable de entorno
+const API_URL = import.meta.env.VITE_API_URL;
+
+// Carga de clave de la API en mockapi.io
+// const API_URL = "https://6869b5392af1d945cea265e5.mockapi.io/api/Products";
 // Revisar si el endpoint es con myusculas o no...
 
 
