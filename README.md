@@ -35,19 +35,3 @@ Una tienda online construida con React, Context API y MockAPI. Incluye:
    ```bash
    git clone https://github.com/tu-usuario/mi-ecommerce-react.git
    cd mi-ecommerce-react
-
-📂 Estructura de Carpetas
-
-├── public/                 # index.html, favicon, etc.
-├── src/
-│   ├── api/                # Lógica de llamadas a MockAPI
-│   ├── components/
-│   │   ├── common/         # Loader, ConfirmDeleteModal, etc.
-│   │   └── products/       # List, Card, ProductForm, ProductModal
-│   ├── context/            # AuthContext, ProductContext, CartContext
-│   ├── pages/              # HomePage, ProductsPage, CartPage, AdminPage, LoginPage
-│   ├── routes/             # AppRouter, ProtectedRoute
-│   ├── App.jsx
-│   └── main.jsx
-├── vite.config.js
-└── package.json
