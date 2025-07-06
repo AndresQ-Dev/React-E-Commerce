@@ -35,3 +35,4 @@ Una tienda online construida con React, Context API y MockAPI. Incluye:
    ```bash
    git clone https://github.com/tu-usuario/mi-ecommerce-react.git
    cd mi-ecommerce-react
+   
