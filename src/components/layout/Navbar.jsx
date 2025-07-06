@@ -7,7 +7,7 @@ import { CartContext } from '../../context/CartContext'; // Contexto del carrito
 import { CartFill, BoxArrowInRight, BoxArrowRight } from 'react-bootstrap-icons'; // Íconos
 
 export default function AppNavbar() {
-  // 1. Obtenemos los datos y funciones de los contextos
+  // 1. llamado a contextos de autenticación y carrito
   const { isAuthenticated, user, logout } = useContext(AuthContext);
   const { cartItems } = useContext(CartContext);
   const navigate = useNavigate();
@@ -17,18 +17,18 @@ export default function AppNavbar() {
 
   const handleLogout = () => {
     logout();
-    navigate('/'); // Redirige al inicio después del logout
+    navigate('/'); // Redirige
   };
 
   return (
     <Navbar bg="dark" variant="dark" expand="lg" sticky="top" className="shadow-sm">
       <Container>
         <Navbar.Brand as={Link} to="/">
-          🚀 Mi Tienda
+          🚀 REACT E_Commerce
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          {/* Links principales a la izquierda */}
+          {/* Links izquierda */}
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Inicio</Nav.Link>
             <Nav.Link as={Link} to="/products">Productos</Nav.Link>
@@ -70,3 +70,4 @@ export default function AppNavbar() {
     </Navbar>
   );
 }
+// revisar estilos para que el navbar y estlizarlo...
