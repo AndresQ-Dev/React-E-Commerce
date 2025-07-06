@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export const ProductContext = createContext();
 
-const API_URL = 'https://6869b5392af1d945cea265e5.mockapi.io/api/Products';
+const API_URL = import.meta.env.VITE_API_URL;
 
 export const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]);

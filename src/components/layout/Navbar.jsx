@@ -24,7 +24,7 @@ export default function AppNavbar() {
     <Navbar bg="dark" variant="dark" expand="lg" sticky="top" className="shadow-sm">
       <Container>
         <Navbar.Brand as={Link} to="/">
-          🚀 REACT E_Commerce
+          🚀 REACT eCommerce
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
