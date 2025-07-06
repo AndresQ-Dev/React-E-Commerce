@@ -34,5 +34,5 @@ Incluye:
 
 1. Clonar este repositorio  
    ```bash
-   git clone https://github.com/tu-usuario/mi-ecommerce-react.git
+   git clone https://github.com/AndresQ-Dev/React-E-Commerce.git
    cd mi-ecommerce-react
